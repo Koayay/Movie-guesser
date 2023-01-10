@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { interval, Observable, take, tap } from 'rxjs';
 import { Movie } from '../models/movie.model';
 import { MoviesService } from '../services/movies.service';
 
@@ -15,6 +16,5 @@ export class MovieListComponent implements OnInit{
   }
 
   ngOnInit(): void{
-    this.movies = this.moviesService.getAllMovies();
   }
 }

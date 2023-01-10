@@ -11,6 +11,7 @@ import {MatIconModule} from '@angular/material/icon'
 import {MatButtonModule} from '@angular/material/button'
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { SingleMovieComponent } from './single-movie/single-movie.component'
+import {MatInputModule} from '@angular/material/input'
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { SingleMovieComponent } from './single-movie/single-movie.component'
     AppRoutingModule,
     MatIconModule,
     MatButtonModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]

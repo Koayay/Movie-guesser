@@ -1,6 +1,11 @@
 <div class="game-display">
+  <h2> Time left : {{chrono$ | async}} </h2>
     <h2>{{ movie.title }}</h2>
     <img [src]="movie.imageURL" [alt]="">
+    <mat-form-field class="example-full-width">
+      <mat-label>Nom du film</mat-label>
+      <input matInput placeholder="Ex. Texas Ranger" >
+    </mat-form-field>
     <p>Score : {{ movie.score }}</p>
     <button mat-raised-button routerLink="" class="btn">Revenir au menu</button>
   </div>

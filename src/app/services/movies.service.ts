@@ -47,6 +47,31 @@ export class MoviesService {
           imageURL: 'https://fr.web.img4.acsta.net/r_1280_720/newsv7/21/01/06/17/07/4361180.png',
           choixDuJoueur: '',
         },
+        {
+          id: 5,
+          title: "De quel film provient cette image ?",
+          score: 3427,
+          nomDuFilm: 'Harry Potter',
+          imageURL: 'https://images.ladepeche.fr/api/v1/images/view/5f22e7f28fe56f217076ccc5/large/image.jpg?v=1',
+          choixDuJoueur: '',
+        },
+        {
+          id:6,
+          title: "De quel film provient cette image ?",
+          score: 3427,
+          nomDuFilm: 'Star wars',
+          imageURL: 'https://i.ytimg.com/vi/vDpDhofRoXA/maxresdefault.jpg',
+          choixDuJoueur: '',
+        },
+        {
+          id:7,
+          title: "De quel film provient cette image ?",
+          score: 3427,
+          nomDuFilm: 'Wall-E',
+          imageURL: 'https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F6%2F2018%2F06%2Fmcdwall_ec079-2000.jpg',
+          choixDuJoueur: '',
+        },
+        
       ];
 
       getAllMovies(): Movie[]{
