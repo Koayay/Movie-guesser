@@ -1,5 +1,5 @@
 import { Component, OnInit, OnDestroy} from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { interval, map, Observable, take, tap } from 'rxjs';
 import { Movie } from '../models/movie.model';
 import { MoviesService } from '../services/movies.service';
@@ -12,9 +12,11 @@ import { MoviesService } from '../services/movies.service';
 export class SingleMovieComponent implements OnInit, OnDestroy {
 
   movie!: Movie;
+  movies!: Movie[];
   chrono$!: Observable<number>;
   constructor(private moviesService: MoviesService,
-              private route: ActivatedRoute) { 
+              private route: ActivatedRoute,
+              private router: Router) { 
   }
 
   ngOnInit(): void {
@@ -28,5 +30,12 @@ export class SingleMovieComponent implements OnInit, OnDestroy {
 
   ngOnDestroy(): void {
     
+  }
+
+  onSubmitForm(): void {
+    if(this.movie.choixDuJoueur === this.movie.nomDuFilm)
+    {
+      this.router.navigateByUrl("movieGuessing/menu");
+    }
   }
 }

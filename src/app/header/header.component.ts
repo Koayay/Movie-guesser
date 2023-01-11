@@ -12,10 +12,4 @@ export class HeaderComponent{
   constructor(private moviesService: MoviesService,
               private router: Router) {}
 
-  onPlay(){
-    var randomId!: number;
-    randomId = Math.floor(Math.random() * this.moviesService.getAllMovies().length);
-    this.router.navigateByUrl("movieGuessing");
-    this.router.navigateByUrl(`movieGuessing/${randomId}`);
-  }
 }

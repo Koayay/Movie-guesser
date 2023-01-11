@@ -11,7 +11,9 @@ import {MatIconModule} from '@angular/material/icon'
 import {MatButtonModule} from '@angular/material/button'
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { SingleMovieComponent } from './single-movie/single-movie.component'
-import {MatInputModule} from '@angular/material/input'
+import {MatInputModule} from '@angular/material/input';
+import { OnGameMenuComponent } from './on-game-menu/on-game-menu.component'
+import { FormsModule } from'@angular/forms'
 
 @NgModule({
   declarations: [
@@ -21,6 +23,7 @@ import {MatInputModule} from '@angular/material/input'
     HeaderComponent,
     LandingPageMovieGuesserComponent,
     SingleMovieComponent,
+    OnGameMenuComponent,
   ],
   imports: [
     BrowserModule,
@@ -28,7 +31,8 @@ import {MatInputModule} from '@angular/material/input'
     MatIconModule,
     MatButtonModule,
     MatToolbarModule,
-    MatInputModule
+    MatInputModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
