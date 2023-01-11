@@ -4,5 +4,7 @@ export class Movie{
     score!: number;
     nomDuFilm!: string;
     imageURL!: string;
+    moyenImageURL!: string;
+    grandImageURL!: string;
     choixDuJoueur!: string;
 }
