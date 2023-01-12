@@ -1,5 +1,5 @@
 import { Injectable} from "@angular/core";
-import { Movie } from "../models/movie.model";
+import { Movie, Player, RefScore } from "../models/movie.model";
 
 @Injectable( {
     providedIn: 'root'
@@ -89,9 +89,35 @@ export class MoviesService {
         },
         
       ];
+    player: Player = {
+      score : 0,
+      reussite : 0
+    }
+
+    refScore: RefScore[] =
+      [
+        {
+          imageState : 1,
+          coeff : 1000
+        },
+        {
+          imageState: 2,
+          coeff : 100
+        },
+        {
+          imageState: 3,
+          coeff : 10
+        }
+      ]
+
+    
 
       getAllMovies(): Movie[]{
         return this.movies;
+      }
+
+      getPlayer(): Player{
+        return this.player;
       }
 
       getMovieById(movieID: number): Movie {
@@ -101,6 +127,10 @@ export class MoviesService {
         } else {
             return movie;
         }
+      }
+
+      getCoeff(): RefScore[]{
+        return this.refScore;
       }
 
 }

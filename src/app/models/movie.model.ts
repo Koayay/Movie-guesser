@@ -8,3 +8,13 @@ export class Movie{
     grandImageURL!: string;
     choixDuJoueur!: string;
 }
+
+export class Player{
+    score!: number;
+    reussite!: number;
+}
+
+export interface RefScore{
+    imageState: number;
+    coeff: number;
+}

@@ -7,13 +7,14 @@ import { MovieListComponent } from './movie-list/movie-list.component';
 import { HeaderComponent } from './header/header.component';
 import { AppRoutingModule } from './app-routing.module';
 import { LandingPageMovieGuesserComponent } from './landing-page-movie-guesser/landing-page-movie-guesser.component';
-import {MatIconModule} from '@angular/material/icon'
-import {MatButtonModule} from '@angular/material/button'
+import {MatIconModule} from '@angular/material/icon';
+import {MatButtonModule} from '@angular/material/button';
 import {MatToolbarModule} from '@angular/material/toolbar';
-import { SingleMovieComponent } from './single-movie/single-movie.component'
+import { SingleMovieComponent } from './single-movie/single-movie.component';
 import {MatInputModule} from '@angular/material/input';
-import { OnGameMenuComponent } from './on-game-menu/on-game-menu.component'
-import { FormsModule } from'@angular/forms'
+import { OnGameMenuComponent } from './on-game-menu/on-game-menu.component';
+import { FormsModule } from'@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { FormsModule } from'@angular/forms'
     LandingPageMovieGuesserComponent,
     SingleMovieComponent,
     OnGameMenuComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -32,7 +34,8 @@ import { FormsModule } from'@angular/forms'
     MatButtonModule,
     MatToolbarModule,
     MatInputModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
