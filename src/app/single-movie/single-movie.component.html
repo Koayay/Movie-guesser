@@ -1,15 +1,15 @@
 <div class="game-display">
-  <h2> Time left : {{chrono$ | async}} </h2>
-    <h2>{{ movie.title }}</h2>
+  <h2> Temps restant : {{chrono$ | async}} </h2>
+    <h2>De quel film provient cette image ?</h2>
     <img [src]="imageURL" [alt]="">
     <form (ngSubmit)="onSubmitForm()">
       <mat-form-field class="example-full-width">
         <mat-label for="nomDeFilm">Nom du film</mat-label>
         <input type="film" id="nomDeFilm" [(ngModel)]="this.movie.choixDuJoueur" name = "userFilm" matInput placeholder="Ex. Texas Ranger" >
       </mat-form-field>
-      <button mat-raised-button type="submit">OK</button>
+      <button color="primary" mat-raised-button type="submit">OK</button>
     </form>
-    <button mat-raised-button onclick="processChanges()" (click)="extendedImage()" >Agrandir l'image</button>
-    <p>Score : {{ player.score }}</p>
-    <button mat-raised-button routerLink="" class="btn">Revenir au menu</button>
+    <button mat-raised-button (click)="extendedImage()" color="warn" >Agrandir l'image</button>
+    <button mat-raised-button color="accent" (click)="onSkipping()" >Passer au film suivant</button>
+    <button mat-raised-button routerLink="" >Revenir au menu</button>
   </div>

@@ -15,7 +15,16 @@ export class LandingPageMovieGuesserComponent{
 
   onPlay(){
     var randomId!: number;
-    randomId = Math.floor(Math.random() * this.moviesService.getAllMovies().length);
-    this.router.navigateByUrl(`movieGuessing/${randomId}`);
+    for(let i = 0;i<5;i++)
+    {
+      randomId = Math.floor(Math.random() * this.moviesService.getAllMovies().length);
+      while(this.moviesService.getPlayer().tableauIdFilm.includes(randomId))
+      {
+        randomId = Math.floor(Math.random() * this.moviesService.getAllMovies().length);
+      }
+      this.moviesService.getPlayer().tableauIdFilm[i] = randomId;
+    }
+    console.log(this.moviesService.getPlayer().tableauIdFilm)
+    this.router.navigateByUrl(`movieGuessing/${this.moviesService.getPlayer().tableauIdFilm[0]}`);
   }
 }

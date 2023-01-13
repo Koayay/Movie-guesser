@@ -38,8 +38,8 @@ export class SingleMovieComponent implements OnInit {
       take(26),
       map(value => 25 -value),
     );
-    this.subscription = this.chrono$.subscribe(value => {this.player.score = value * (this.refScore.find(rf => rf.imageState === this.imageState)?.coeff ?? 0) ;
-    console.log(this.player.score)});
+    this.subscription = this.chrono$.subscribe(value => {this.score = value * (this.refScore.find(rf => rf.imageState === this.imageState)?.coeff ?? 0) ;
+    console.log(this.score)});
   }
 
 
@@ -57,18 +57,36 @@ export class SingleMovieComponent implements OnInit {
       }
   }
 
+  onSkipping(): void{
+    this.subscription.unsubscribe();
+    this.movie.choixDuJoueur = "";
+    this.player.nbFilmCherche++;
+    if(this.player.nbFilmCherche === 5)
+      {
+        this.router.navigateByUrl("movieGuessing/endingMenu");
+      }
+      else{
+        this.router.navigateByUrl("movieGuessing/menu");
+      }
+  }
+
   onSubmitForm(): void {
     if(this.movie.choixDuJoueur === this.movie.nomDuFilm)
     {
-     
-    
-  
-        this.subscription.unsubscribe();
-
-
-
-      this.router.navigateByUrl("movieGuessing/menu");
+      this.player.reussite++;
       this.movie.choixDuJoueur = "";
+      this.player.nbFilmCherche++;
+      if(this.player.nbFilmCherche === 5)
+      {
+        this.subscription.unsubscribe();
+        this.router.navigateByUrl("movieGuessing/endingMenu");
+      }
+      else
+      {
+        this.player.score += this.score;
+        this.subscription.unsubscribe();
+        this.router.navigateByUrl("movieGuessing/menu");
+      }
     }
   }
 }

@@ -1,7 +1,7 @@
 <div class="game-display">
-    <h2> C'était bien le bon film !</h2>
+    <h2> Partie en cours : {{player.reussite}}/{{player.nbFilmCherche}} !</h2>
     <br><br>
     <p>Score : {{ player.score }}</p>
-    <button mat-raised-button color="primary" (click)="onPlay()" >Lancer une nouvelle partie</button>
-    <button mat-raised-button routerLink="" class="btn">Revenir au menu</button>
+    <button mat-raised-button color="primary" (click)="onPlay()" >Prochain Film</button>
+    <button mat-raised-button color="warn" routerLink="" class="btn">Revenir au menu</button>
 </div>

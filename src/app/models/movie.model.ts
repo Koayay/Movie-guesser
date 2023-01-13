@@ -1,7 +1,5 @@
 export class Movie{
     id!: number;
-    title!: string;
-    score!: number;
     nomDuFilm!: string;
     imageURL!: string;
     moyenImageURL!: string;
@@ -12,6 +10,8 @@ export class Movie{
 export class Player{
     score!: number;
     reussite!: number;
+    nbFilmCherche!: number;
+    tableauIdFilm!: number[];
 }
 
 export interface RefScore{

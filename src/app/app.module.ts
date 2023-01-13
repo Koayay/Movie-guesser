@@ -14,7 +14,8 @@ import { SingleMovieComponent } from './single-movie/single-movie.component';
 import {MatInputModule} from '@angular/material/input';
 import { OnGameMenuComponent } from './on-game-menu/on-game-menu.component';
 import { FormsModule } from'@angular/forms';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { EndingMenuComponent } from './ending-menu/ending-menu.component'
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
     LandingPageMovieGuesserComponent,
     SingleMovieComponent,
     OnGameMenuComponent,
+    EndingMenuComponent,
     
   ],
   imports: [

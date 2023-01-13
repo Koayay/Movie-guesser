@@ -11,7 +11,6 @@ import { MoviesService } from '../services/movies.service';
 export class OnGameMenuComponent implements OnInit {
 
   player!: Player;
-
   constructor(private router: Router,
     private moviesService: MoviesService) {}
 
@@ -20,8 +19,6 @@ export class OnGameMenuComponent implements OnInit {
     }
     
     onPlay(){
-      var randomId!: number;
-      randomId = Math.floor(Math.random() * this.moviesService.getAllMovies().length);
-      this.router.navigateByUrl(`movieGuessing/${randomId}`);
+      this.router.navigateByUrl(`movieGuessing/${this.player.tableauIdFilm[this.player.nbFilmCherche]}`);
     }
 }
